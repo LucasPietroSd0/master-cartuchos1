@@ -1,0 +1,240 @@
+#root {max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 ; }
+
+body { margin: 0; font-family: Arial, sans-serif; background-color: #1a1a1a; color: #fff;  padding-top: 80px; }
+
+.app { text-align: center; } 
+
+* {
+  box-sizing: border-box;
+}
+
+
+.bnr1{ width: 100%; height: 550px; display: block; box-shadow: 0px 10px 10px 15px rgba(0, 0, 0, 0.35); } 
+
+
+.header { display: flex; justify-content: space-between; align-items: center; padding: 30px; position: fixed;   width: 100%;
+  left: 0;
+height: 70px; top: 0; background: linear-gradient( 90deg, rgba(1, 4, 7, 0.75), rgba(11, 72, 102, 0.55) ); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255, 255, 255, 0.15); box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3); z-index: 1000; }
+
+.local{position: relative; top: -15px;} 
+
+.mapa { width: 100%; height: 300px; /* SEM ISSO O MAPA NÃO APARECE */ margin: 40px 0; position: relative; top:-50px } .mapa iframe { width: 100%; height: 100%; border: 0; }
+
+.logo { height: 80px; width: 80px; border-radius: 50%; }
+
+.banner1 { display: flex; justify-content: center; margin-top: 0px; height: 450px; position: relative; left: -20px; box-shadow: 0px 10px 10px 15px rgba(0, 0, 0, 0.35); }
+
+.nav { padding: 10px; }
+
+.nav a { color: #fff; text-decoration: none; margin: 0 15px; font-weight: bold; font-size: 30px; } 
+
+.nav a:hover { text-decoration: underline;
+     color: rgb(40 178 195) } 
+     
+.description { margin: 20px; font-size: 1.5em; } 
+
+.info { display: flex; justify-content: center; gap: 20px; margin: 20px; }
+
+.info-card { background-color: #444; padding: 5px; border-radius: 10px; width: 500px; height: 345px; box-shadow: 0px 10px 10px 15px rgba(0, 0, 0, 0.35); background: linear-gradient( 90deg, rgba(55, 106, 150, 0.75), rgba(150, 51, 51, 0.55) ); } 
+
+.info-card img { width: 100%; border-radius: 10px; } 
+
+.footer { background-color: rgb(0 26 73);
+     padding: 20px; font-size: 0.99em; }
+
+/* Centralizando imagens */
+img {
+  display: inline;
+  margin: 0;
+}
+
+.banner1 {
+  display: flex;
+  justify-content: center;
+  margin-top: 0px;
+  height: 350px;
+  position: relative;
+  left: -20px;
+  box-shadow: 0px 10px 10px 15px rgba(0, 0, 0, 0.35);
+}
+
+.bnr1 {
+  width: 100%;
+  height: 550px;
+  display: block;
+  box-shadow: 0px 10px 10px 15px rgba(0, 0, 0, 0.35);
+}
+
+.mapa iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.whats{ height: 60px; width: 60px; 
+display: flex;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.whats:hover {
+  transform: scale(1.1);}
+
+/* Media queries para dispositivos móveis */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+    padding: 1px;
+  }
+
+  .logo {
+    height: 70px;
+    width: 70px;
+  }
+
+  .nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+  }
+
+  .nav a {
+    font-size: 20px;
+    margin: 5px;
+  }
+
+  .banner {
+    margin-top: 10px;
+  }
+
+  .info {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .info-card {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .mapa {
+    height: 200px;
+  }
+
+  .footer {
+    font-size: 0.9em;
+    text-align: center;
+  }
+
+  /* Ajustes adicionais para imagens em dispositivos móveis */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .bnr1 {
+    width: 100%;
+    height: auto;
+  }
+
+  .banner1 img {
+    width: 100%;
+    height: auto;
+  }
+  
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+}
+
+@media (max-width: 480px) {
+.whats{ height: 50px; width: 50px; 
+display: flex;
+  position: fixed;
+  right: 45px;
+  bottom: 20px;
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.whats:hover {
+  transform: scale(1.1);}
+
+  .header {
+    padding: 2px;
+    height: auto;
+  }
+
+  .logo {
+    height: 50px;
+    width: 50px;
+  }
+
+  .nav a {
+    font-size: 16px;
+    margin: 3px;
+  }
+
+  .info-card {
+    width: 113%;
+    position: relative;
+    left: -20px;
+  }
+
+  .mapa {
+    height: 300px;
+    width: 100%;
+    position: relative;
+    left: -2px;
+  }
+
+  .footer {
+    font-size: 0.8em;
+  }
+
+  /* Ajustes adicionais para imagens em dispositivos móveis */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .bnr1 {
+    width: 110%;
+  }
+.banner1{ height: 330px;
+    width: 115%;
+  }
+  .banner1 img {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    
+  }
+
+  
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+}
