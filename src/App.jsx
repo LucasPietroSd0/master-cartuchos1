@@ -20,7 +20,6 @@ function App() { return ( <div className="app">
      <img className="anuncio" src={anuncio} alt="Master Cartuchos Logo" /> 
      <nav className="nav"> 
         <a href="#inicio">Início</a> 
-     <a href="#produtos">Produtos</a>
       <a href="#servicos">Serviços</a> 
      <a href="#contato">Contato</a> </nav> 
 </header>
