@@ -4,7 +4,7 @@ import './App.css';
   import mapImage from './assets/map.png';
    import bnr1 from './assets/bnr1.png'; 
    import whats from './assets/whats.png';
-   import logo from './assets/anuncio.png';
+   import anuncio from './assets/anuncio.png';
 
 function App() { return ( <div className="app"> 
 
@@ -17,7 +17,7 @@ function App() { return ( <div className="app">
   <img className='whats' src={whats} alt="WhatsApp" />
 </a>
 <header className="header">
-     <img className="logo" src={logo} alt="Master Cartuchos Logo" /> 
+     <img className="anuncio" src={anuncio} alt="Master Cartuchos Logo" /> 
      <nav className="nav"> 
         <a href="#inicio">Início</a> 
      <a href="#produtos">Produtos</a>
