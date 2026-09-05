@@ -1,0 +1,171 @@
+﻿/* Master Cartuchos - Custom Styles & Effects */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;600;700;800;900&display=swap');
+
+:root {
+  --cmyk-cyan: #00a8ff;
+  --cmyk-magenta: #e0115f;
+  --cmyk-yellow: #fbc531;
+  --cmyk-black: #1e272e;
+  --brand-blue: #0984e3;
+  --brand-dark: #0b132b;
+  --brand-darker: #060b18;
+  --brand-card: rgba(16, 26, 54, 0.75);
+  --brand-card-border: rgba(0, 168, 255, 0.2);
+  --whatsapp-green: #25D366;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background-color: var(--brand-darker);
+  color: #f1f5f9;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, .font-heading {
+  font-family: 'Outfit', sans-serif;
+}
+
+/* Glassmorphism */
+.glass-panel {
+  background: rgba(13, 22, 45, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-card {
+  background: linear-gradient(135deg, rgba(20, 32, 65, 0.75) 0%, rgba(10, 18, 38, 0.85) 100%);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 168, 255, 0.15);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card:hover {
+  border-color: rgba(0, 168, 255, 0.45);
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px -10px rgba(0, 168, 255, 0.25);
+}
+
+/* CMYK Glow Borders */
+.cmyk-glow {
+  position: relative;
+}
+
+.cmyk-glow::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  background: linear-gradient(45deg, #00a8ff, #e0115f, #fbc531, #00a8ff);
+  border-radius: inherit;
+  z-index: -1;
+  opacity: 0.6;
+  filter: blur(8px);
+  background-size: 300% 300%;
+  animation: glowingBg 6s ease infinite;
+}
+
+@keyframes glowingBg {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(1deg);
+  }
+}
+
+.animate-float {
+  animation: float 5s ease-in-out infinite;
+}
+
+/* Pulsing Badge / WhatsApp */
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 16px rgba(37, 211, 102, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+.whatsapp-pulse {
+  animation: pulse-ring 2.5s infinite;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #060b18;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 5px;
+  border: 2px solid #060b18;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00a8ff;
+}
+
+/* CMYK ink accent gradients */
+.text-gradient-cmyk {
+  background: linear-gradient(90deg, #00a8ff 0%, #fbc531 50%, #e0115f 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-blue {
+  background: linear-gradient(135deg, #ffffff 30%, #38bdf8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.badge-cmyk-c { background-color: rgba(0, 168, 255, 0.15); color: #38bdf8; border: 1px solid rgba(0, 168, 255, 0.3); }
+.badge-cmyk-m { background-color: rgba(224, 17, 95, 0.15); color: #f43f5e; border: 1px solid rgba(224, 17, 95, 0.3); }
+.badge-cmyk-y { background-color: rgba(251, 197, 49, 0.15); color: #facc15; border: 1px solid rgba(251, 197, 49, 0.3); }
+.badge-cmyk-k { background-color: rgba(148, 163, 184, 0.15); color: #cbd5e1; border: 1px solid rgba(148, 163, 184, 0.3); }
+
+/* Range Slider / Radio styling */
+.service-option input[type="radio"]:checked + .option-card {
+  border-color: #00a8ff;
+  background-color: rgba(0, 168, 255, 0.18);
+  box-shadow: 0 0 20px rgba(0, 168, 255, 0.35);
+}
+
+/* Accordion Smooth Transition */
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+  opacity: 0;
+}
+.faq-item.active .faq-answer {
+  max-height: 500px;
+  opacity: 1;
+}
+.faq-item.active .faq-chevron {
+  transform: rotate(180deg);
+}
+
+/* Glow orb background decorative items */
+.glow-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 0;
+}
