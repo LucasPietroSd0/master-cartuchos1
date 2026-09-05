@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://lucaspietrosd0.github.io/master-cartuchos1/sitemap.xml
