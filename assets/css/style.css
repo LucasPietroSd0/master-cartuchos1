@@ -26,10 +26,6 @@ i[data-lucide] {
   height: 1em;
 }
 
-.status-badge {
-  min-height: 24px;
-}
-
 .site-footer .text-slate-400,
 .site-footer .text-slate-500 {
   color: #cbd5e1;

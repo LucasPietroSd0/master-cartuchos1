@@ -60,11 +60,11 @@ function updateOperatingStatus() {
     if (isOpen) {
         statusDot.className = 'w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse';
         statusText.textContent = nextInfo;
-        statusBadge.className = 'status-badge inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/30';
+        statusBadge.className = 'inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/30';
     } else {
         statusDot.className = 'w-2.5 h-2.5 rounded-full bg-amber-400';
         statusText.textContent = nextInfo;
-        statusBadge.className = 'status-badge inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-amber-500/10 text-amber-400 border border-amber-500/30';
+        statusBadge.className = 'inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-amber-500/10 text-amber-400 border border-amber-500/30';
     }
 }
 
