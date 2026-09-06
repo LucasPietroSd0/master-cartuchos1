@@ -173,10 +173,10 @@ function initModelFilter() {
     filterButtons.forEach(btn => {
         btn.addEventListener('click', () => {
             filterButtons.forEach(b => {
-                b.classList.remove('bg-sky-500', 'text-white', 'border-sky-400');
+                b.classList.remove('bg-sky-700', 'text-white', 'border-sky-700');
                 b.classList.add('bg-slate-800/80', 'text-slate-300', 'border-slate-700');
             });
-            btn.classList.add('bg-sky-500', 'text-white', 'border-sky-400');
+            btn.classList.add('bg-sky-700', 'text-white', 'border-sky-700');
             btn.classList.remove('bg-slate-800/80', 'text-slate-300', 'border-slate-700');
             
             activeCategory = btn.getAttribute('data-filter') || 'all';
