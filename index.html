@@ -8,6 +8,10 @@
     <meta name="keywords" content="recarga de cartuchos recife, cartucho hp ipsep, master cartuchos, recarga hp 662, recarga hp 664, recarga hp 667, venda de cartuchos recife, tinta para impressora recife">
     <meta name="author" content="Master Cartuchos">
     <meta name="google-site-verification" content="ZeG3X9JH5XiC-LcyvoOsQp8MrZZr6EMU-T_Pa50icAY">
+
+    <link rel="preconnect" href="https://unpkg.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
     <!-- Open Graph / Social Media -->
     <meta property="og:type" content="business.business">
@@ -20,38 +24,11 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="./assets/images/hero-bg.jpg">
     
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        cmyk: {
-                            cyan: '#00a8ff',
-                            magenta: '#e0115f',
-                            yellow: '#fbc531',
-                            black: '#1e272e'
-                        },
-                        brand: {
-                            blue: '#0284c7',
-                            hover: '#0369a1',
-                            dark: '#0b132b',
-                            darker: '#060b18',
-                            card: '#0f172a'
-                        }
-                    },
-                    fontFamily: {
-                        sans: ['Plus Jakarta Sans', 'sans-serif'],
-                        heading: ['Outfit', 'sans-serif']
-                    }
-                }
-            }
-        }
-    </script>
+    <!-- Tailwind CSS compilado localmente -->
+    <link rel="stylesheet" href="./assets/css/tailwind.css">
     
     <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/lucide@latest" defer></script>
     
     <!-- Custom Styles -->
     <link rel="stylesheet" href="./assets/css/style.css">
@@ -138,7 +115,7 @@
             <div class="flex items-center justify-between h-20">
                 <!-- Logo -->
                 <a href="#" class="flex items-center gap-3 group">
-                    <img src="./assets/images/hero-bg.jpg" alt="Master Cartuchos Recife" class="h-12 md:h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105 drop-shadow-[0_0_12px_rgba(0,168,255,0.4)]">
+                    <img src="./assets/images/hero-bg.jpg" alt="Master Cartuchos Recife" width="56" height="56" decoding="async" class="h-12 md:h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105 drop-shadow-[0_0_12px_rgba(0,168,255,0.4)]">
                 </a>
 
                 <!-- Desktop Navigation -->
@@ -259,7 +236,7 @@
 
                             <!-- Cartridge showcase image with 3D float -->
                             <div class="relative py-4 flex justify-center items-center">
-                                <img src="./assets/images/cartuchos-hp.png" alt="Cartuchos HP 662XL Preto e Colorido Recarga Recife" class="w-4/5 max-w-[280px] object-contain drop-shadow-[0_20px_30px_rgba(0,0,0,0.8)] animate-float">
+                                <img src="./assets/images/cartuchos-hp.png" alt="Cartuchos HP 662XL Preto e Colorido Recarga Recife" width="280" height="280" fetchpriority="high" decoding="async" class="w-4/5 max-w-[280px] object-contain drop-shadow-[0_20px_30px_rgba(0,0,0,0.8)] animate-float">
                             </div>
 
                             <!-- Floating Info Cards -->
@@ -1132,7 +1109,7 @@
                             referrerpolicy="no-referrer-when-downgrade">
                         </iframe>
                         <div class="absolute bottom-3 left-3 z-10 flex max-w-[calc(100%-1.5rem)] items-center gap-3 rounded-xl border border-slate-700/80 bg-slate-950/90 p-2.5 text-white shadow-xl backdrop-blur-md">
-                            <img src="./assets/images/hero-bg.jpg" alt="Master Cartuchos" class="h-11 w-11 shrink-0 rounded-lg object-cover">
+                            <img src="./assets/images/hero-bg.jpg" alt="Master Cartuchos" width="44" height="44" loading="lazy" decoding="async" class="h-11 w-11 shrink-0 rounded-lg object-cover">
                             <div class="min-w-0">
                                 <p class="truncate text-xs font-bold">Master Cartuchos</p>
                                 <p class="truncate text-[11px] text-slate-300">R. Dr. Raposo Pinto, 199 - Ipsep</p>
@@ -1257,7 +1234,7 @@
                 
                 <!-- Brand Info -->
                 <div class="lg:col-span-2 space-y-4">
-                    <img src="./assets/images/hero-bg.jpg" alt="Master Cartuchos Logo" class="h-14 w-auto object-contain drop-shadow-[0_0_12px_rgba(0,168,255,0.4)]">
+                    <img src="./assets/images/hero-bg.jpg" alt="Master Cartuchos Logo" width="56" height="56" loading="lazy" decoding="async" class="h-14 w-auto object-contain drop-shadow-[0_0_12px_rgba(0,168,255,0.4)]">
                     <p class="text-slate-400 text-xs sm:text-sm leading-relaxed max-w-sm">
                         Especializada em recarga e venda de cartuchos HP DeskJet no bairro do Ipsep, Recife. Economia, alta qualidade de impressão e compromisso com nossos clientes.
                     </p>
@@ -1361,13 +1338,15 @@
 
     <!-- Initialize Lucide Icons -->
     <script>
-        lucide.createIcons();
+        document.addEventListener('DOMContentLoaded', () => {
+            lucide.createIcons();
 
-        const whatsappPath = 'M12.04 2C6.58 2 2.14 6.44 2.14 11.9c0 1.75.46 3.4 1.26 4.83L2 22l5.41-1.38a9.9 9.9 0 0 0 4.63 1.17h.01c5.46 0 9.9-4.44 9.9-9.9S17.5 2 12.04 2zm5.77 14.25c-.24.68-1.4 1.3-1.93 1.37-.5.08-1.13.11-1.82-.11-.42-.13-.96-.31-1.65-.61-2.9-1.25-4.8-4.18-4.95-4.36-.14-.19-1.18-1.57-1.18-2.99 0-1.42.74-2.12 1-2.4.24-.26.53-.33.7-.33.18 0 .35 0 .5.01.16.01.38-.06.6.46.23.54.8 1.96.87 2.1.07.14.12.3.02.49-.1.2-.15.3-.3.46-.15.18-.32.39-.46.52-.15.15-.3.31-.13.6.18.3.78 1.29 1.68 2.09 1.15 1.02 2.12 1.34 2.42 1.49.3.15.47.13.64-.08.18-.2.73-.85.92-1.14.2-.3.38-.25.65-.15.27.1 1.7.8 1.99.95.3.15.5.22.57.35.07.13.07.76-.17 1.44z';
-        document.querySelectorAll('svg.lucide-message-circle').forEach(icon => {
-            icon.innerHTML = `<path d="${whatsappPath}"></path>`;
-            icon.setAttribute('fill', 'currentColor');
-            icon.removeAttribute('stroke');
+            const whatsappPath = 'M12.04 2C6.58 2 2.14 6.44 2.14 11.9c0 1.75.46 3.4 1.26 4.83L2 22l5.41-1.38a9.9 9.9 0 0 0 4.63 1.17h.01c5.46 0 9.9-4.44 9.9-9.9S17.5 2 12.04 2zm5.77 14.25c-.24.68-1.4 1.3-1.93 1.37-.5.08-1.13.11-1.82-.11-.42-.13-.96-.31-1.65-.61-2.9-1.25-4.8-4.18-4.95-4.36-.14-.19-1.18-1.57-1.18-2.99 0-1.42.74-2.12 1-2.4.24-.26.53-.33.7-.33.18 0 .35 0 .5.01.16.01.38-.06.6.46.23.54.8 1.96.87 2.1.07.14.12.3.02.49-.1.2-.15.3-.3.46-.15.18-.32.39-.46.52-.15.15-.3.31-.13.6.18.3.78 1.29 1.68 2.09 1.15 1.02 2.12 1.34 2.42 1.49.3.15.47.13.64-.08.18-.2.73-.85.92-1.14.2-.3.38-.25.65-.15.27.1 1.7.8 1.99.95.3.15.5.22.57.35.07.13.07.76-.17 1.44z';
+            document.querySelectorAll('svg.lucide-message-circle').forEach(icon => {
+                icon.innerHTML = `<path d="${whatsappPath}"></path>`;
+                icon.setAttribute('fill', 'currentColor');
+                icon.removeAttribute('stroke');
+            });
         });
     </script>
     <!-- Main JS -->
